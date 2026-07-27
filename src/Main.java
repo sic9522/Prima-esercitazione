@@ -22,12 +22,18 @@ public class Main {
         simoneSim.stampaDati();
 
         //stampa 2
-        Chiamata chiamata = new Chiamata();
-        chiamata.durataMinuti = 10;
-        chiamata.numeroChiamato = 3396723133L;
+        Chiamata chiamata = new Chiamata(10, 3396723133L);
         simoneSim.registraChiamata(chiamata);
 
         simoneSim.stampaDati();
 
+        Articolo giacca = new Articolo("#26", "Giacca in pelle", 200, 2);
+        giacca.stampaArticolo();
+
+        Cliente vale = new Cliente(129, "Valentina Ferro", "valentina@gmail.com","01/01/2026");
+        vale.stampaCliente();
+
+        Carello nuovoAcquisto = new Carello("Giacca", 130, 2);
+        System.out.println("Totale carello: " + nuovoAcquisto.calcolaTotale());
     }
 }
